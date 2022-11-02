@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocalStorage } from './useLocalStorage';
 
-function useTodos() {
+export function useTodos() {
   const {
     item: todos,
     saveItem: saveTodos,
@@ -34,8 +34,13 @@ function useTodos() {
       completed: false,
       text,
       id,
-    }
-  );
+    })
+    saveTodos(newTodos);
+  };
+  const editTodo = (id,newText) => {
+    const todoIndex = todos.findIndex(todo => todo.id === id);
+    const newTodos = [...todos];
+    newTodos[todoIndex].text = newText;
     saveTodos(newTodos);
   };
 
@@ -70,6 +75,7 @@ function useTodos() {
     deleteTodo,
     setOpenModal,
     sincronizeTodos,
+    editTodo,
   };
 
   return { state, stateUpdaters };
@@ -77,4 +83,3 @@ function useTodos() {
 function generateId(array) {
   return (array.length)?(Math.max(...array.map(el=>el.id))+1):1
 }
-export { useTodos };

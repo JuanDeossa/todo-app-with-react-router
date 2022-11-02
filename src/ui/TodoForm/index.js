@@ -13,8 +13,7 @@ export function TodoForm(props) {
   };
   const onSubmit = (event) => {
     event.preventDefault();
-    // props.submitEvent(newTodoValue);
-    props.submitEvent();
+    props.submitEvent(newTodoValue);
     navigate('/')
   };
 
@@ -22,9 +21,9 @@ export function TodoForm(props) {
     <form onSubmit={onSubmit}>
       <label>{props.label}</label>
       <textarea
-        value={newTodoValue}
+        value={props.text}
         onChange={onChange}
-        placeholder="Cortar la cebolla oara el almuerzo"
+        placeholder="..."
       />
       <div className="TodoForm-buttonContainer">
         <button

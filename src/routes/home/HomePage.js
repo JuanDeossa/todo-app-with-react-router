@@ -26,7 +26,6 @@ export function HomePage() {
   } = state;
 
   const {
-    // addTodo,
     completeTodo,
     deleteTodo,
     setSearchValue,
