@@ -1,7 +1,7 @@
 import React from 'react';
 import './CreateTodoButton.css';
 
-function CreateTodoButton(props) {
+export function CreateTodoButton(props) {
   const onClickButton = () => {
     props.setOpenModal(prevState => !prevState);
   };
@@ -15,5 +15,3 @@ function CreateTodoButton(props) {
     </button>
   );
 }
-
-export { CreateTodoButton };

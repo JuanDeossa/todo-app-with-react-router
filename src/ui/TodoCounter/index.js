@@ -1,7 +1,7 @@
 import React from 'react';
 import './TodoCounter.css';
 
-function TodoCounter({ totalTodos, completedTodos, loading }) {
+export function TodoCounter({ totalTodos, completedTodos, loading }) {
   return (
     <h2
       className={`TodoCounter ${!!loading && "TodoCounter--loading"}`}
@@ -10,5 +10,3 @@ function TodoCounter({ totalTodos, completedTodos, loading }) {
     </h2>
   );
 }
-
-export { TodoCounter };
