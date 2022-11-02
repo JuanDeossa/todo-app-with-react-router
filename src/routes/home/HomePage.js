@@ -9,7 +9,7 @@ import { TodoItem } from '../../ui/TodoItem';
 import { TodosError } from '../../ui/TodosError';
 import { TodosLoading } from '../../ui/TodosLoading';
 import { EmptyTodos } from '../../ui/EmptyTodos';
-import { TodoForm } from '../../ui/TodoForm';
+// import { TodoForm } from '../../ui/TodoForm';
 import { CreateTodoButton } from '../../ui/CreateTodoButton';
 import { ChangeAlert } from '../../ui/ChangeAlert';
 
@@ -26,7 +26,7 @@ export function HomePage() {
   } = state;
 
   const {
-    addTodo,
+    // addTodo,
     completeTodo,
     deleteTodo,
     setSearchValue,
@@ -65,7 +65,7 @@ export function HomePage() {
           completed={todo.completed}
           onComplete={() => completeTodo(todo.id)}
           onDelete={() => deleteTodo(todo.id)}
-          onEdit={() => console.log("edited")}
+          onEdit={() => navigate(`/edit/${todo.id}`)}
         />
       )}
     </TodoList>
