@@ -28,7 +28,7 @@ function useTodos() {
   }
 
   const addTodo = (text) => {
-    const id = todos.length+1
+    const id=generateId(todos)
     const newTodos = [...todos];
     newTodos.push({
       completed: false,
@@ -74,5 +74,7 @@ function useTodos() {
 
   return { state, stateUpdaters };
 }
-
+function generateId(array) {
+  return (array.length)?(Math.max(...array.map(el=>el.id))+1):1
+}
 export { useTodos };

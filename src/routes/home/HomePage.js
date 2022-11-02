@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useTodos } from '../useTodos';
 import { TodoHeader } from '../../ui/TodoHeader';
 import { TodoCounter } from '../../ui/TodoCounter';
@@ -10,7 +11,6 @@ import { TodosLoading } from '../../ui/TodosLoading';
 import { EmptyTodos } from '../../ui/EmptyTodos';
 import { TodoForm } from '../../ui/TodoForm';
 import { CreateTodoButton } from '../../ui/CreateTodoButton';
-import { Modal } from '../../ui/Modal';
 import { ChangeAlert } from '../../ui/ChangeAlert';
 
 export function HomePage() {
@@ -22,19 +22,17 @@ export function HomePage() {
     searchedTodos,
     totalTodos,
     completedTodos,
-    openModal,
     searchValue,
   } = state;
 
   const {
-    setOpenModal,
     addTodo,
     completeTodo,
     deleteTodo,
     setSearchValue,
     sincronizeTodos,
   } = stateUpdaters;
-
+  const navigate=useNavigate()
   return (
     <>
     <TodoHeader loading={loading}>
@@ -71,16 +69,8 @@ export function HomePage() {
         />
       )}
     </TodoList>
-    {!!openModal && (
-      <Modal>
-        <TodoForm
-          addTodo={addTodo}
-          setOpenModal={setOpenModal}
-        />
-      </Modal>
-    )}
     <CreateTodoButton
-      setOpenModal={setOpenModal}
+      onClick={()=>navigate('/new')}
     />
     <ChangeAlert
       sincronize={sincronizeTodos}
