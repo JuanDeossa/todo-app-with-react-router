@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './TodoForm.css';
 
 export function TodoForm(props) {
-  const [newTodoValue, setNewTodoValue] = React.useState('');
+  const [newTodoValue, setNewTodoValue] = React.useState(props.oldText||'');
   const navigate=useNavigate()
   const onChange = (event) => {
     setNewTodoValue(event.target.value);
@@ -21,7 +21,7 @@ export function TodoForm(props) {
     <form onSubmit={onSubmit}>
       <label>{props.label}</label>
       <textarea
-        value={props.text}
+        value={newTodoValue}
         onChange={onChange}
         placeholder="..."
       />

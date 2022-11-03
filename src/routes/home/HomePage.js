@@ -9,7 +9,6 @@ import { TodoItem } from '../../ui/TodoItem';
 import { TodosError } from '../../ui/TodosError';
 import { TodosLoading } from '../../ui/TodosLoading';
 import { EmptyTodos } from '../../ui/EmptyTodos';
-// import { TodoForm } from '../../ui/TodoForm';
 import { CreateTodoButton } from '../../ui/CreateTodoButton';
 import { ChangeAlert } from '../../ui/ChangeAlert';
 
@@ -64,7 +63,10 @@ export function HomePage() {
           completed={todo.completed}
           onComplete={() => completeTodo(todo.id)}
           onDelete={() => deleteTodo(todo.id)}
-          onEdit={() => navigate(`/edit/${todo.id}`)}
+          onEdit={() => navigate(
+            `/edit/${todo.id}`,
+            {state:{text:todo.text}}
+          )}
         />
       )}
     </TodoList>
