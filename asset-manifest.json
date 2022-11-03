@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/todo-app-with-react-router/static/css/main.06ca81e8.chunk.css",
+    "main.js": "/todo-app-with-react-router/static/js/main.fbe4d5e6.chunk.js",
+    "main.js.map": "/todo-app-with-react-router/static/js/main.fbe4d5e6.chunk.js.map",
+    "runtime-main.js": "/todo-app-with-react-router/static/js/runtime-main.c576f711.js",
+    "runtime-main.js.map": "/todo-app-with-react-router/static/js/runtime-main.c576f711.js.map",
+    "static/js/2.71e5e4d7.chunk.js": "/todo-app-with-react-router/static/js/2.71e5e4d7.chunk.js",
+    "static/js/2.71e5e4d7.chunk.js.map": "/todo-app-with-react-router/static/js/2.71e5e4d7.chunk.js.map",
+    "index.html": "/todo-app-with-react-router/index.html",
+    "static/css/main.06ca81e8.chunk.css.map": "/todo-app-with-react-router/static/css/main.06ca81e8.chunk.css.map",
+    "static/js/2.71e5e4d7.chunk.js.LICENSE.txt": "/todo-app-with-react-router/static/js/2.71e5e4d7.chunk.js.LICENSE.txt",
+    "static/media/check.fa4fb594.svg": "/todo-app-with-react-router/static/media/check.fa4fb594.svg",
+    "static/media/delete.331149da.svg": "/todo-app-with-react-router/static/media/delete.331149da.svg",
+    "static/media/edit.34d3679a.svg": "/todo-app-with-react-router/static/media/edit.34d3679a.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c576f711.js",
+    "static/js/2.71e5e4d7.chunk.js",
+    "static/css/main.06ca81e8.chunk.css",
+    "static/js/main.fbe4d5e6.chunk.js"
+  ]
+}
